@@ -69,7 +69,15 @@ public class Ball : MonoBehaviour {
 					transform.position += Vector3.left * 20 * Time.deltaTime;
 				}
 			}
-		transform.position = new Vector3 (Mathf.Clamp (transform.position.x, 0 + WidthOfBar, 23.5f), transform.position.y, transform.position.z);
+			if( Application.loadedLevelName=="Settings"){
+				transform.position = new Vector3 (Mathf.Clamp (transform.position.x, 0 + WidthOfBar, 25.5f), transform.position.y, transform.position.z);
+
+			}
+			else{
+				transform.position = new Vector3 (Mathf.Clamp (transform.position.x, 0 + WidthOfBar, 23.5f), transform.position.y, transform.position.z);
+
+			}
+
 		}
 
 	
