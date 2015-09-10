@@ -35,7 +35,7 @@ public class FloorTrigger : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D flask){
-		print ("flask tag" + flask.gameObject.tag);
+
 		if (flask.gameObject.tag =="MoreInformationFlask" && Application.loadedLevelName == "MainMenu") {
 			Application.LoadLevel("Options");
 		} 
@@ -56,7 +56,19 @@ public class FloorTrigger : MonoBehaviour {
 		if(flask.gameObject.tag =="SettingFlask" && Application.loadedLevelName == "Options" ){
 			Application.LoadLevel ("Settings");
 		}
+		if(flask.gameObject.tag =="GoToSetPitch"){
+			Application.LoadLevel ("SetUserPitch");
+		}
+		if(flask.gameObject.tag =="Mute"){
+	
+			PlayerPrefsManager.SetVolumeIsOn(1-PlayerPrefsManager.GetVolumeIsOn());
+		
+				AudioListener.volume = 1-AudioListener.volume;
 
+
+			Application.LoadLevel ("Settings");
+
+		}
 		if (Application.loadedLevelName == "SetUserPitch") {
 
 			GetUserPitch getUserPitch = GameObject.Find ("GetUserPitch").GetComponent<GetUserPitch> ();

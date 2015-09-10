@@ -5,7 +5,7 @@ using System.Collections;
 public class GetUserPitch : MonoBehaviour {
 	private  float time;
 	private  Text HigestPitchText,LowestPitchText;
-	private float highestPitch=0,lowestpitch=400;
+	private float highestPitch=380,lowestpitch=120;
 	private  bool checkHigest = false,checkLowest=false;
 	public  Slider highestPitchSlider;
 	public  Slider lowestPitchSlider;
@@ -53,9 +53,9 @@ public class GetUserPitch : MonoBehaviour {
 		count=0;
 		sum = 0;
 		print ("isFirst " + isFirst);
-		if (lowestpitch==400 || highestPitch==0) {
+		if (isFirst) {
 			Ball ball = (Ball)Instantiate (preFarbBall, new Vector2 (20.5f, 8.7f), Quaternion.identity);
-
+			isFirst=false;
 		} else if (PlayerPrefsManager.GetIsFirstTime ()==0) {
 			Application.LoadLevel ("GAME");
 
@@ -68,6 +68,8 @@ public class GetUserPitch : MonoBehaviour {
 	
 	
 	void Start () {
+		print("PlayerPrefsManager.GetHighestPitch  " + PlayerPrefsManager.GetHighestPitch());
+		print("PlayerPrefsManager.GetLowhestPitch  " + PlayerPrefsManager.GetLowhestPitch());
 		HigestPitchText = (Text) GameObject.Find("HigestPitchText").GetComponent<Text>();
 		LowestPitchText = (Text) GameObject.Find("LowestPitchText").GetComponent<Text>();
 		lowestPitchSlider.gameObject.SetActive (false);

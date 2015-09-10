@@ -7,7 +7,18 @@ public class PlayerPrefsManager : MonoBehaviour {
 	const string Lowest_Pitch_Key = "Lowest Pitch";	
 	const string High_Score_Key = "Higest Score";	
 	const string Is_First_Time_Key="Is First Time";
+	const string Volume_Is_On="Volume Is On";
 
+	public static void SetVolumeIsOn(int zeroIsTrue){
+		
+		PlayerPrefs.SetInt (Volume_Is_On,zeroIsTrue);
+	}
+	
+	public static int GetVolumeIsOn(){
+		
+		return PlayerPrefs.GetInt(Volume_Is_On);
+		
+	}
 
 
 	public static void SetIsFirstTime(int zeroIsTrue){

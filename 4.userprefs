@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NGUI\Scripts\Internal\NGUITools.cs">
+    <Files>
+      <File FileName="Assets\Scripts\LoginManager.cs" Line="34" Column="1" />
+      <File FileName="c:\Users\Eran\Desktop\4\Assets\Facebook\Scripts\AndroidFacebook.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Leaderboards.cs" Line="74" Column="7" />
+      <File FileName="Assets\GameSparks\GameSparksUnity.cs" Line="18" Column="16" />
+      <File FileName="Assets\Scripts\Controller.cs" Line="144" Column="1" />
+      <File FileName="Assets\GridLeaderBoard.cs" Line="24" Column="35" />
+      <File FileName="Assets\NGUI\Scripts\Internal\NGUITools.cs" Line="504" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
